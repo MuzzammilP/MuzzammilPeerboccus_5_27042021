@@ -13,19 +13,21 @@ const fetchItems = async () => {
 const itemsDisplay = async () => {
 	await fetchItems();
 
-	document.getElementById("items").innerHTML = itemsData.map(
-		(canape) => `
-	<div id="items${canape._id}" class="items">
-	<article>
-		<img src="${canape.imageUrl}"></img>
-		<h3>${canape.name}</h3>
-		<p>${canape.description}</p>
-	</article>
-	
-	
+	document.getElementById("items").innerHTML = itemsData
+		.map(
+			(canape) => `
+	<div class="items id="items${canape._id}">
+		<a>
+			<article>
+				<img src="${canape.imageUrl}"/>
+				<h3>${canape.name}</h3>
+				<p>${canape.description}</p>
+			</article>
+		</a>
 	</div>
 	`
-	);
+		)
+		.join("");
 };
 
 itemsDisplay();
