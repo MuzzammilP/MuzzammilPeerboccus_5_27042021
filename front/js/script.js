@@ -17,7 +17,7 @@ const itemsDisplay = async () => {
 		.map(
 			(canape) => `
 
-		<a id="items${canape._id}">
+		<a href= id="items${canape._id}">
 			<article>
 				<img src="${canape.imageUrl}" alt="${canape.name}"/>
 				<h3>${canape.name}</h3>
