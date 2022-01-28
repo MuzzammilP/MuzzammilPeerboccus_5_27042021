@@ -19,7 +19,7 @@ const itemsDisplay = async () => {
 	<div class="items id="items${canape._id}">
 		<a>
 			<article>
-				<img src="${canape.imageUrl}"/>
+				<img src="${canape.imageUrl}" alt="${canape.name}"/>
 				<h3>${canape.name}</h3>
 				<p>${canape.description}</p>
 			</article>
