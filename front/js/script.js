@@ -16,15 +16,14 @@ const itemsDisplay = async () => {
 	document.getElementById("items").innerHTML = itemsData
 		.map(
 			(canape) => `
-	<div class="items id="items${canape._id}">
-		<a>
+
+		<a id="items${canape._id}">
 			<article>
 				<img src="${canape.imageUrl}" alt="${canape.name}"/>
 				<h3>${canape.name}</h3>
 				<p>${canape.description}</p>
 			</article>
 		</a>
-	</div>
 	`
 		)
 		.join("");
