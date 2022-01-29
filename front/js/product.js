@@ -20,7 +20,6 @@ fetch("http://localhost:3000/api/products/" + newID)
 		price.innerText = `${data.price}`;
 		description.innerText = `${data.description}`;
 
-		// je configure le choix des couleurs
 		for (number in data.colors) {
 			colors.options[colors.options.length] = new Option(
 				data.colors[number],
